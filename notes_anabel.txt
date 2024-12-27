@@ -1,0 +1,14 @@
+cd docker/experiments
+docker build --tag experiments .
+
+set DATA_PATH=C:/Users/anabe/Documents/TUWIEN/ExperimentDesignForDataScinece/Assignment/data/deezer_podcast_dataset.tsv
+set CODE_PATH=C:/Users/anabe/Documents/TUWIEN/ExperimentDesignForDataScinece/Assignment
+docker run --rm -ti --name=experiments --memory 16G -v %CODE_PATH%:/workspace -v %DATA_PATH%:/data experiments /bin/bash
+
+docker stop experiments
+
+export OUTPUT_DIR=/workspace/extracted_NEs
+ls /workspace
+ ./launch-rel-batch.sh $OUTPUT_DIR $DATASET $OUTPUT_EL_DIR 512
+
+apt-get update && apt-get install -y dos2unix

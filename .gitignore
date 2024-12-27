@@ -130,3 +130,6 @@ dmypy.json
 
 # Apple files
 .DS_Store
+
+extracted_NEs/
+output_el/

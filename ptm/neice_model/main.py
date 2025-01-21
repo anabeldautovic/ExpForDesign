@@ -99,7 +99,8 @@ def main():
 
     nmf = NMF(
         n_components=args.n_topics,
-        alpha=args.alpha_nmf,
+        alpha_W=args.alpha_nmf,  # use alpha_W for row regularization
+        alpha_H=args.alpha_nmf,  # use alpha_H for column regularization
         l1_ratio=args.l1_ratio_nmf,
         random_state=args.random_state,
     ).fit(

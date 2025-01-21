@@ -119,7 +119,8 @@ def main():
             d['raw_le'] = d['raw']
             d['contains_le'] = False
             d['les'] = None
-        df = df.append(d, ignore_index=True)
+        df = pd.concat([df, pd.DataFrame([d])], ignore_index=True)
+
 
     # Prepro raw corpus without linked entities
     documents = df['raw'].to_list()

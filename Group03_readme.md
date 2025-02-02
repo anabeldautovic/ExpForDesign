@@ -1,6 +1,6 @@
 # Topic Modeling on Podcast Short-Text Metadata
 
-## This is the update doriginal README with modifications done by us so the experiment setup could work
+## This is the updated original README with modifications done by us so the experiment setup could work
 
 The current repository provides the code for NEiCE, a Named Entity (NE) informed corpus embedding for short-text topic modeling with Non-negative Matrix Factorization (NMF). This is part of the experiments described in the article [**Topic Modeling on Podcast Short-Text Metadata**](https://arxiv.org/pdf/2201.04419.pdf), presented at [**ECIR 2022**](https://ecir2022.org/).
 
